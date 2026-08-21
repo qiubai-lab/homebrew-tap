@@ -1,18 +1,22 @@
 cask "qterm" do
-  version "0.1.2"
-  sha256 "dc46f3b4be386e1072d705b66c2fdee85e746c9127315a3abe6da94898a65e23"
+  arch arm: "aarch64", intel: "x86_64"
 
-  url "https://github.com/qiubai-lab/Qterm/releases/download/v#{version}/Qterm_#{version}_aarch64.dmg"
+  version "0.2.0"
+
+  on_arm do
+    sha256 "dc46f3b4be386e1072d705b66c2fdee85e746c9127315a3abe6da94898a65e23"
+  end
+  on_intel do
+    sha256 "<intel dmg 的 sha256>"
+  end
+
+  url "https://github.com/qiubai-lab/Qterm/releases/download/v#{version}/Qterm_#{version}_#{arch}.dmg"
   name "Qterm"
   desc "Cross-platform SSH terminal"
   homepage "https://github.com/qiubai-lab/Qterm"
 
-  depends_on arch: :arm64
-
   app "Qterm.app"
 
-  # Qterm is ad-hoc signed and not notarized; strip the quarantine
-  # attribute so Gatekeeper does not report the app as damaged.
   postflight do
     system_command "/usr/bin/xattr",
                    args: ["-dr", "com.apple.quarantine", "#{appdir}/Qterm.app"]
