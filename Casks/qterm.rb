@@ -4,10 +4,10 @@ cask "qterm" do
   version "0.3.10"
 
   on_arm do
-    sha256 "04edd6a889b04faf60843d3907c21b161ceee7fa6c88bf7a60c5080b5ba8055d"
+    sha256 "0ef99852352cd6290da79d707d3c0b8a902c0cf8027fff3e8ae04c6486aa5554"
   end
   on_intel do
-    sha256 "2c65000885ae6c709b5edc4fabae99bc646453fc2ca70ad3d5bab132e3dd00f7"
+    sha256 "ab53b3ecfcd3d47a4b9fa8eb537086d52775870dec0b01432654186ef8060ac5"
   end
 
   url "https://github.com/qiubai-lab/Qterm/releases/download/v#{version}/Qterm_#{version}_#{arch}.dmg"
