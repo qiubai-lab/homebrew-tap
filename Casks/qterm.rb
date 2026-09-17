@@ -1,7 +1,7 @@
 cask "qterm" do
   arch arm: "aarch64", intel: "x86_64"
 
-  version "0.3.10"
+  version "0.5.0"
 
   on_arm do
     sha256 "0ef99852352cd6290da79d707d3c0b8a902c0cf8027fff3e8ae04c6486aa5554"
