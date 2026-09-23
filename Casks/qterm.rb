@@ -1,5 +1,5 @@
 cask "qterm" do
-  arch arm: "aarch64", intel: "x86_64"
+  arch arm: "aarch64", intel: "x64"
 
   version "0.5.0"
 
