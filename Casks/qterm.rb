@@ -1,13 +1,13 @@
 cask "qterm" do
   arch arm: "aarch64", intel: "x64"
 
-  version "0.5.7"
+  version "0.6.0"
 
   on_arm do
-    sha256 "383b613cca28ad40b5aac56ace34974401c055ad0f5e9650cc604a65669dc5ee"
+    sha256 "acbb4899fbbb917b53d781e496c94ff9a985c0301637ff906c14127dd473d51f"
   end
   on_intel do
-    sha256 "e943ef03fe801347d6ba047d2b160eaefaa5b5174c8bfa4e3f21849e58a08be2"
+    sha256 "3aef560477a9c0c50188166e05ceeb0680efda08979b3c6fdf71db0f47fb0e0e"
   end
 
   url "https://github.com/qiubai-lab/Qterm/releases/download/v#{version}/Qterm_#{version}_#{arch}.dmg"
